@@ -1,2 +1,2 @@
 # DesktopLab
-A collection of desktop applications built to learn, practice, and strengthen programming fundamentals
+A collection of mini desktop applications built to learn, practice, and strengthen my programming fundamentals
