@@ -30,41 +30,41 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.SizeSmall = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.grpSize = new System.Windows.Forms.GroupBox();
+            this.rdoLarge = new System.Windows.Forms.RadioButton();
+            this.rdoMedium = new System.Windows.Forms.RadioButton();
+            this.rdoSmall = new System.Windows.Forms.RadioButton();
+            this.grpCrustType = new System.Windows.Forms.GroupBox();
+            this.rdoThickCrust = new System.Windows.Forms.RadioButton();
+            this.rdoThinCrust = new System.Windows.Forms.RadioButton();
+            this.grpToppings = new System.Windows.Forms.GroupBox();
+            this.chkExtraCheese = new System.Windows.Forms.CheckBox();
+            this.chkGreenPeppers = new System.Windows.Forms.CheckBox();
+            this.chkOnion = new System.Windows.Forms.CheckBox();
+            this.chkOlives = new System.Windows.Forms.CheckBox();
+            this.chkTomatoes = new System.Windows.Forms.CheckBox();
+            this.chkMushrooms = new System.Windows.Forms.CheckBox();
+            this.grpWhereToEat = new System.Windows.Forms.GroupBox();
+            this.rdoTakeOut = new System.Windows.Forms.RadioButton();
+            this.rdoEatIn = new System.Windows.Forms.RadioButton();
+            this.btnOrderPizza = new System.Windows.Forms.Button();
+            this.btnResetForm = new System.Windows.Forms.Button();
+            this.grpOrderSummary = new System.Windows.Forms.GroupBox();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.lblWhereToEat = new System.Windows.Forms.Label();
+            this.lblCrustType = new System.Windows.Forms.Label();
+            this.lblToppings = new System.Windows.Forms.Label();
+            this.lblSize = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.grpSize.SuspendLayout();
+            this.grpCrustType.SuspendLayout();
+            this.grpToppings.SuspendLayout();
+            this.grpWhereToEat.SuspendLayout();
+            this.grpOrderSummary.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -78,279 +78,317 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "MAKE YOUR PIZZA";
             // 
-            // radioButton2
+            // grpSize
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(30, 96);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(75, 21);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Medium";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.grpSize.Controls.Add(this.rdoLarge);
+            this.grpSize.Controls.Add(this.rdoMedium);
+            this.grpSize.Controls.Add(this.rdoSmall);
+            this.grpSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpSize.Location = new System.Drawing.Point(12, 134);
+            this.grpSize.Name = "grpSize";
+            this.grpSize.Size = new System.Drawing.Size(191, 197);
+            this.grpSize.TabIndex = 1;
+            this.grpSize.TabStop = false;
+            this.grpSize.Text = "Size";
             // 
-            // SizeSmall
+            // rdoLarge
             // 
-            this.SizeSmall.AutoSize = true;
-            this.SizeSmall.Location = new System.Drawing.Point(30, 48);
-            this.SizeSmall.Name = "SizeSmall";
-            this.SizeSmall.Size = new System.Drawing.Size(60, 21);
-            this.SizeSmall.TabIndex = 2;
-            this.SizeSmall.TabStop = true;
-            this.SizeSmall.Text = "Small";
-            this.SizeSmall.UseVisualStyleBackColor = true;
+            this.rdoLarge.AutoSize = true;
+            this.rdoLarge.Location = new System.Drawing.Point(29, 143);
+            this.rdoLarge.Name = "rdoLarge";
+            this.rdoLarge.Size = new System.Drawing.Size(63, 21);
+            this.rdoLarge.TabIndex = 2;
+            this.rdoLarge.TabStop = true;
+            this.rdoLarge.Tag = "12";
+            this.rdoLarge.Text = "Large";
+            this.rdoLarge.UseVisualStyleBackColor = true;
+            this.rdoLarge.CheckedChanged += new System.EventHandler(this.rdoLarge_CheckedChanged);
             // 
-            // radioButton3
+            // rdoMedium
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(30, 144);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(63, 21);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Large";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdoMedium.AutoSize = true;
+            this.rdoMedium.Checked = true;
+            this.rdoMedium.Location = new System.Drawing.Point(29, 96);
+            this.rdoMedium.Name = "rdoMedium";
+            this.rdoMedium.Size = new System.Drawing.Size(75, 21);
+            this.rdoMedium.TabIndex = 1;
+            this.rdoMedium.TabStop = true;
+            this.rdoMedium.Tag = "10";
+            this.rdoMedium.Text = "Medium";
+            this.rdoMedium.UseVisualStyleBackColor = true;
+            this.rdoMedium.CheckedChanged += new System.EventHandler(this.rdoMedium_CheckedChanged);
             // 
-            // groupBox1
+            // rdoSmall
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.SizeSmall);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 134);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(191, 197);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Size";
+            this.rdoSmall.AutoSize = true;
+            this.rdoSmall.Location = new System.Drawing.Point(29, 48);
+            this.rdoSmall.Name = "rdoSmall";
+            this.rdoSmall.Size = new System.Drawing.Size(60, 21);
+            this.rdoSmall.TabIndex = 0;
+            this.rdoSmall.TabStop = true;
+            this.rdoSmall.Tag = "8";
+            this.rdoSmall.Text = "Small";
+            this.rdoSmall.UseVisualStyleBackColor = true;
+            this.rdoSmall.CheckedChanged += new System.EventHandler(this.rdoSmall_CheckedChanged);
             // 
-            // groupBox2
+            // grpCrustType
             // 
-            this.groupBox2.Controls.Add(this.radioButton5);
-            this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(14, 371);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(188, 157);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Crust Type";
+            this.grpCrustType.Controls.Add(this.rdoThickCrust);
+            this.grpCrustType.Controls.Add(this.rdoThinCrust);
+            this.grpCrustType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpCrustType.Location = new System.Drawing.Point(14, 371);
+            this.grpCrustType.Name = "grpCrustType";
+            this.grpCrustType.Size = new System.Drawing.Size(188, 157);
+            this.grpCrustType.TabIndex = 2;
+            this.grpCrustType.TabStop = false;
+            this.grpCrustType.Tag = "0";
+            this.grpCrustType.Text = "Crust Type";
             // 
-            // radioButton5
+            // rdoThickCrust
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(30, 91);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(97, 21);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Thick Crust";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rdoThickCrust.AutoSize = true;
+            this.rdoThickCrust.Location = new System.Drawing.Point(30, 91);
+            this.rdoThickCrust.Name = "rdoThickCrust";
+            this.rdoThickCrust.Size = new System.Drawing.Size(97, 21);
+            this.rdoThickCrust.TabIndex = 4;
+            this.rdoThickCrust.TabStop = true;
+            this.rdoThickCrust.Tag = "2";
+            this.rdoThickCrust.Text = "Thick Crust";
+            this.rdoThickCrust.UseVisualStyleBackColor = true;
+            this.rdoThickCrust.CheckedChanged += new System.EventHandler(this.rdoThickCrust_CheckedChanged);
             // 
-            // radioButton4
+            // rdoThinCrust
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(30, 39);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(91, 21);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Thin Crust";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rdoThinCrust.AutoSize = true;
+            this.rdoThinCrust.Checked = true;
+            this.rdoThinCrust.Location = new System.Drawing.Point(30, 39);
+            this.rdoThinCrust.Name = "rdoThinCrust";
+            this.rdoThinCrust.Size = new System.Drawing.Size(91, 21);
+            this.rdoThinCrust.TabIndex = 3;
+            this.rdoThinCrust.TabStop = true;
+            this.rdoThinCrust.Tag = "0";
+            this.rdoThinCrust.Text = "Thin Crust";
+            this.rdoThinCrust.UseVisualStyleBackColor = true;
+            this.rdoThinCrust.CheckedChanged += new System.EventHandler(this.rdoThinCrust_CheckedChanged);
             // 
-            // groupBox3
+            // grpToppings
             // 
-            this.groupBox3.Controls.Add(this.checkBox4);
-            this.groupBox3.Controls.Add(this.checkBox5);
-            this.groupBox3.Controls.Add(this.checkBox6);
-            this.groupBox3.Controls.Add(this.checkBox3);
-            this.groupBox3.Controls.Add(this.checkBox1);
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(239, 134);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(368, 197);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Toppings";
+            this.grpToppings.Controls.Add(this.chkExtraCheese);
+            this.grpToppings.Controls.Add(this.chkGreenPeppers);
+            this.grpToppings.Controls.Add(this.chkOnion);
+            this.grpToppings.Controls.Add(this.chkOlives);
+            this.grpToppings.Controls.Add(this.chkTomatoes);
+            this.grpToppings.Controls.Add(this.chkMushrooms);
+            this.grpToppings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpToppings.Location = new System.Drawing.Point(239, 134);
+            this.grpToppings.Name = "grpToppings";
+            this.grpToppings.Size = new System.Drawing.Size(368, 197);
+            this.grpToppings.TabIndex = 3;
+            this.grpToppings.TabStop = false;
+            this.grpToppings.Text = "Toppings";
             // 
-            // checkBox4
+            // chkExtraCheese
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(194, 144);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(124, 21);
-            this.checkBox4.TabIndex = 5;
-            this.checkBox4.Text = "Green Peppers";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkExtraCheese.AutoSize = true;
+            this.chkExtraCheese.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkExtraCheese.Location = new System.Drawing.Point(41, 48);
+            this.chkExtraCheese.Name = "chkExtraCheese";
+            this.chkExtraCheese.Size = new System.Drawing.Size(111, 21);
+            this.chkExtraCheese.TabIndex = 5;
+            this.chkExtraCheese.Tag = "1.5";
+            this.chkExtraCheese.Text = "Extra Cheese";
+            this.chkExtraCheese.UseVisualStyleBackColor = true;
+            this.chkExtraCheese.CheckedChanged += new System.EventHandler(this.chkExtraCheese_CheckedChanged);
             // 
-            // checkBox5
+            // chkGreenPeppers
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Location = new System.Drawing.Point(194, 48);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(65, 21);
-            this.checkBox5.TabIndex = 3;
-            this.checkBox5.Text = "Onion";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chkGreenPeppers.AutoSize = true;
+            this.chkGreenPeppers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkGreenPeppers.Location = new System.Drawing.Point(193, 144);
+            this.chkGreenPeppers.Name = "chkGreenPeppers";
+            this.chkGreenPeppers.Size = new System.Drawing.Size(124, 21);
+            this.chkGreenPeppers.TabIndex = 10;
+            this.chkGreenPeppers.Tag = "1";
+            this.chkGreenPeppers.Text = "Green Peppers";
+            this.chkGreenPeppers.UseVisualStyleBackColor = true;
+            this.chkGreenPeppers.CheckedChanged += new System.EventHandler(this.chkGreenPeppers_CheckedChanged);
             // 
-            // checkBox6
+            // chkOnion
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(194, 96);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(66, 21);
-            this.checkBox6.TabIndex = 4;
-            this.checkBox6.Text = "Olives";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chkOnion.AutoSize = true;
+            this.chkOnion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOnion.Location = new System.Drawing.Point(194, 48);
+            this.chkOnion.Name = "chkOnion";
+            this.chkOnion.Size = new System.Drawing.Size(65, 21);
+            this.chkOnion.TabIndex = 6;
+            this.chkOnion.Tag = "1";
+            this.chkOnion.Text = "Onion";
+            this.chkOnion.UseVisualStyleBackColor = true;
+            this.chkOnion.CheckedChanged += new System.EventHandler(this.chkOnion_CheckedChanged);
             // 
-            // checkBox3
+            // chkOlives
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(41, 144);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(90, 21);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Tomatoes";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkOlives.AutoSize = true;
+            this.chkOlives.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOlives.Location = new System.Drawing.Point(193, 96);
+            this.chkOlives.Name = "chkOlives";
+            this.chkOlives.Size = new System.Drawing.Size(66, 21);
+            this.chkOlives.TabIndex = 8;
+            this.chkOlives.Tag = "1.25";
+            this.chkOlives.Text = "Olives";
+            this.chkOlives.UseVisualStyleBackColor = true;
+            this.chkOlives.CheckedChanged += new System.EventHandler(this.chkOlives_CheckedChanged);
             // 
-            // checkBox1
+            // chkTomatoes
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(41, 48);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(103, 21);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Extra Chees\r\n";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkTomatoes.AutoSize = true;
+            this.chkTomatoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTomatoes.Location = new System.Drawing.Point(41, 144);
+            this.chkTomatoes.Name = "chkTomatoes";
+            this.chkTomatoes.Size = new System.Drawing.Size(90, 21);
+            this.chkTomatoes.TabIndex = 9;
+            this.chkTomatoes.Tag = "1";
+            this.chkTomatoes.Text = "Tomatoes";
+            this.chkTomatoes.UseVisualStyleBackColor = true;
+            this.chkTomatoes.CheckedChanged += new System.EventHandler(this.chkTomatoes_CheckedChanged);
             // 
-            // checkBox2
+            // chkMushrooms
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(41, 96);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(100, 21);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Mushrooms";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkMushrooms.AutoSize = true;
+            this.chkMushrooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMushrooms.Location = new System.Drawing.Point(41, 96);
+            this.chkMushrooms.Name = "chkMushrooms";
+            this.chkMushrooms.Size = new System.Drawing.Size(100, 21);
+            this.chkMushrooms.TabIndex = 7;
+            this.chkMushrooms.Tag = "1.25";
+            this.chkMushrooms.Text = "Mushrooms";
+            this.chkMushrooms.UseVisualStyleBackColor = true;
+            this.chkMushrooms.CheckedChanged += new System.EventHandler(this.chkMushrooms_CheckedChanged);
             // 
-            // groupBox4
+            // grpWhereToEat
             // 
-            this.groupBox4.Controls.Add(this.radioButton7);
-            this.groupBox4.Controls.Add(this.radioButton6);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(242, 371);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(365, 93);
-            this.groupBox4.TabIndex = 4;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Where To Eat";
+            this.grpWhereToEat.Controls.Add(this.rdoTakeOut);
+            this.grpWhereToEat.Controls.Add(this.rdoEatIn);
+            this.grpWhereToEat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpWhereToEat.Location = new System.Drawing.Point(242, 371);
+            this.grpWhereToEat.Name = "grpWhereToEat";
+            this.grpWhereToEat.Size = new System.Drawing.Size(365, 93);
+            this.grpWhereToEat.TabIndex = 4;
+            this.grpWhereToEat.TabStop = false;
+            this.grpWhereToEat.Text = "Where To Eat";
             // 
-            // radioButton7
+            // rdoTakeOut
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(116, 43);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(85, 21);
-            this.radioButton7.TabIndex = 1;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Take Out";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rdoTakeOut.AutoSize = true;
+            this.rdoTakeOut.Location = new System.Drawing.Point(116, 43);
+            this.rdoTakeOut.Name = "rdoTakeOut";
+            this.rdoTakeOut.Size = new System.Drawing.Size(85, 21);
+            this.rdoTakeOut.TabIndex = 12;
+            this.rdoTakeOut.TabStop = true;
+            this.rdoTakeOut.Tag = "0";
+            this.rdoTakeOut.Text = "Take Out";
+            this.rdoTakeOut.UseVisualStyleBackColor = true;
+            this.rdoTakeOut.CheckedChanged += new System.EventHandler(this.rdoTakeOut_CheckedChanged);
             // 
-            // radioButton6
+            // rdoEatIn
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(24, 43);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(62, 21);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Eat In";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rdoEatIn.AutoSize = true;
+            this.rdoEatIn.Checked = true;
+            this.rdoEatIn.Location = new System.Drawing.Point(24, 43);
+            this.rdoEatIn.Name = "rdoEatIn";
+            this.rdoEatIn.Size = new System.Drawing.Size(62, 21);
+            this.rdoEatIn.TabIndex = 11;
+            this.rdoEatIn.TabStop = true;
+            this.rdoEatIn.Tag = "2";
+            this.rdoEatIn.Text = "Eat In";
+            this.rdoEatIn.UseVisualStyleBackColor = true;
+            this.rdoEatIn.CheckedChanged += new System.EventHandler(this.rdoEatIn_CheckedChanged);
             // 
-            // button1
+            // btnOrderPizza
             // 
-            this.button1.Location = new System.Drawing.Point(242, 498);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 64);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Order Pizza";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOrderPizza.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderPizza.Location = new System.Drawing.Point(242, 498);
+            this.btnOrderPizza.Name = "btnOrderPizza";
+            this.btnOrderPizza.Size = new System.Drawing.Size(173, 64);
+            this.btnOrderPizza.TabIndex = 13;
+            this.btnOrderPizza.Text = "Order Pizza";
+            this.btnOrderPizza.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnResetForm
             // 
-            this.button2.Location = new System.Drawing.Point(433, 498);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 64);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Reset Form";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnResetForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetForm.Location = new System.Drawing.Point(433, 498);
+            this.btnResetForm.Name = "btnResetForm";
+            this.btnResetForm.Size = new System.Drawing.Size(174, 64);
+            this.btnResetForm.TabIndex = 14;
+            this.btnResetForm.Text = "Reset Form";
+            this.btnResetForm.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
+            // grpOrderSummary
             // 
-            this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(627, 134);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(261, 394);
-            this.groupBox5.TabIndex = 7;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Order Summary";
+            this.grpOrderSummary.Controls.Add(this.lblTotalPrice);
+            this.grpOrderSummary.Controls.Add(this.lblWhereToEat);
+            this.grpOrderSummary.Controls.Add(this.lblCrustType);
+            this.grpOrderSummary.Controls.Add(this.lblToppings);
+            this.grpOrderSummary.Controls.Add(this.lblSize);
+            this.grpOrderSummary.Controls.Add(this.label6);
+            this.grpOrderSummary.Controls.Add(this.label5);
+            this.grpOrderSummary.Controls.Add(this.label4);
+            this.grpOrderSummary.Controls.Add(this.label3);
+            this.grpOrderSummary.Controls.Add(this.label2);
+            this.grpOrderSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpOrderSummary.Location = new System.Drawing.Point(627, 134);
+            this.grpOrderSummary.Name = "grpOrderSummary";
+            this.grpOrderSummary.Size = new System.Drawing.Size(261, 394);
+            this.grpOrderSummary.TabIndex = 7;
+            this.grpOrderSummary.TabStop = false;
+            this.grpOrderSummary.Text = "Order Summary";
             // 
-            // label2
+            // lblTotalPrice
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Size:";
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.Font = new System.Drawing.Font("MV Boli", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrice.ForeColor = System.Drawing.Color.Green;
+            this.lblTotalPrice.Location = new System.Drawing.Point(107, 328);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(0, 59);
+            this.lblTotalPrice.TabIndex = 9;
             // 
-            // label3
+            // lblWhereToEat
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 18);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Toppings:";
+            this.lblWhereToEat.AutoSize = true;
+            this.lblWhereToEat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWhereToEat.Location = new System.Drawing.Point(142, 276);
+            this.lblWhereToEat.Name = "lblWhereToEat";
+            this.lblWhereToEat.Size = new System.Drawing.Size(0, 18);
+            this.lblWhereToEat.TabIndex = 8;
             // 
-            // label4
+            // lblCrustType
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 179);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 18);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Crust Type:";
+            this.lblCrustType.AutoSize = true;
+            this.lblCrustType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCrustType.Location = new System.Drawing.Point(126, 179);
+            this.lblCrustType.Name = "lblCrustType";
+            this.lblCrustType.Size = new System.Drawing.Size(0, 18);
+            this.lblCrustType.TabIndex = 7;
             // 
-            // label5
+            // lblToppings
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 237);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 18);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Where To Eat:";
+            this.lblToppings.AutoSize = true;
+            this.lblToppings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToppings.Location = new System.Drawing.Point(59, 127);
+            this.lblToppings.Name = "lblToppings";
+            this.lblToppings.Size = new System.Drawing.Size(0, 18);
+            this.lblToppings.TabIndex = 6;
+            // 
+            // lblSize
+            // 
+            this.lblSize.AutoSize = true;
+            this.lblSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSize.Location = new System.Drawing.Point(77, 53);
+            this.lblSize.Name = "lblSize";
+            this.lblSize.Size = new System.Drawing.Size(0, 18);
+            this.lblSize.TabIndex = 5;
             // 
             // label6
             // 
@@ -362,85 +400,74 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Total Price:";
             // 
-            // label7
+            // label5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(77, 53);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(12, 18);
-            this.label7.TabIndex = 5;
-            this.label7.Text = ".";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(25, 237);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 18);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Where To Eat:";
             // 
-            // label8
+            // label4
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(59, 127);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(12, 18);
-            this.label8.TabIndex = 6;
-            this.label8.Text = ".";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(25, 179);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 18);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Crust Type:";
             // 
-            // label9
+            // label3
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(126, 179);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(12, 18);
-            this.label9.TabIndex = 7;
-            this.label9.Text = ".";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(25, 99);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Toppings:";
             // 
-            // label10
+            // label2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(142, 276);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(12, 18);
-            this.label10.TabIndex = 8;
-            this.label10.Text = ".";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MV Boli", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Green;
-            this.label11.Location = new System.Drawing.Point(107, 328);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 59);
-            this.label11.TabIndex = 9;
-            this.label11.Text = ".";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Size:";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 588);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpOrderSummary);
+            this.Controls.Add(this.btnResetForm);
+            this.Controls.Add(this.btnOrderPizza);
+            this.Controls.Add(this.grpWhereToEat);
+            this.Controls.Add(this.grpToppings);
+            this.Controls.Add(this.grpCrustType);
+            this.Controls.Add(this.grpSize);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "Pizza Order";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.grpSize.ResumeLayout(false);
+            this.grpSize.PerformLayout();
+            this.grpCrustType.ResumeLayout(false);
+            this.grpCrustType.PerformLayout();
+            this.grpToppings.ResumeLayout(false);
+            this.grpToppings.PerformLayout();
+            this.grpWhereToEat.ResumeLayout(false);
+            this.grpWhereToEat.PerformLayout();
+            this.grpOrderSummary.ResumeLayout(false);
+            this.grpOrderSummary.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,36 +476,36 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton SizeSmall;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox grpSize;
+        private System.Windows.Forms.GroupBox grpCrustType;
+        private System.Windows.Forms.RadioButton rdoThickCrust;
+        private System.Windows.Forms.RadioButton rdoThinCrust;
+        private System.Windows.Forms.GroupBox grpToppings;
+        private System.Windows.Forms.CheckBox chkTomatoes;
+        private System.Windows.Forms.CheckBox chkMushrooms;
+        private System.Windows.Forms.CheckBox chkGreenPeppers;
+        private System.Windows.Forms.CheckBox chkOnion;
+        private System.Windows.Forms.CheckBox chkOlives;
+        private System.Windows.Forms.GroupBox grpWhereToEat;
+        private System.Windows.Forms.RadioButton rdoTakeOut;
+        private System.Windows.Forms.RadioButton rdoEatIn;
+        private System.Windows.Forms.Button btnOrderPizza;
+        private System.Windows.Forms.Button btnResetForm;
+        private System.Windows.Forms.GroupBox grpOrderSummary;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblSize;
+        private System.Windows.Forms.Label lblWhereToEat;
+        private System.Windows.Forms.Label lblCrustType;
+        private System.Windows.Forms.Label lblToppings;
+        private System.Windows.Forms.Label lblTotalPrice;
+        private System.Windows.Forms.CheckBox chkExtraCheese;
+        private System.Windows.Forms.RadioButton rdoLarge;
+        private System.Windows.Forms.RadioButton rdoMedium;
+        private System.Windows.Forms.RadioButton rdoSmall;
     }
 }
 
