@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PizzaCraft
 {
-    public partial class Main : Form
+    public partial class MainForm : Form
     {
-        public Main()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -88,9 +88,9 @@ namespace PizzaCraft
 
         byte CalculateWhereToEat()
         {
-            if (rdoEatIn.Checked == true)
-                return (Convert.ToByte(rdoThickCrust.Tag));
-            return (Convert.ToByte(rdoEatIn.Tag)); // 0
+            if (rdoTakeOut.Checked == true)
+                return (Convert.ToByte(rdoTakeOut.Tag)); // 0
+            return (Convert.ToByte(rdoEatIn.Tag)); 
         }
 
         float CalculateTotalPrice()
@@ -103,36 +103,96 @@ namespace PizzaCraft
             lblTotalPrice.Text = "$" + (CalculateTotalPrice()).ToString();
         }
 
-        void UpdateToppingsDescription(string Topping, byte status = 0)
+        void UpdateToppingsDescription()
         {
-            if (status == 1)
+            string Toppings = "";
+
+            if (chkExtraCheese.Checked)
             {
-                lblToppings.Text = lblToppings.Text.Replace(", " + Topping, "");
-                lblToppings.Text = lblToppings.Text.Replace(Topping, "");
-                if (string.IsNullOrEmpty(lblToppings.Text))
-                    DefaultToppingsLabel();
-                return;
+                Toppings = "Extra Chees";
             }
 
-            if (lblToppings.Text == "No Toppings")
-                lblToppings.Text = Topping;
-            else
-                lblToppings.Text += (", " + Topping);
+
+            if (chkOnion.Checked)
+            {
+                Toppings += ", Onion";
+            }
+
+            if (chkMushrooms.Checked)
+            {
+                Toppings += ", Mushrooms";
+            }
+
+            if (chkOlives.Checked)
+            {
+                Toppings += ", Olives";
+            }
+
+            if (chkTomatoes.Checked)
+            {
+                Toppings += ", Tomatos";
+            }
+
+            if (chkGreenPeppers.Checked)
+            {
+                Toppings += ", Green Peppars";
+            }
+
+            if (Toppings.StartsWith(","))
+            {
+                Toppings = Toppings.Substring(1, Toppings.Length - 1).Trim();
+            }
+
+            if (Toppings == "")
+                Toppings = "No Toppings";
+
+            lblToppings.Text = Toppings;
         }
 
-        private void rdoSmall_CheckedChanged(object sender, EventArgs e)
+        void ResetForm()
         {
-            UpdateSizeLabel("Small");
-            UpdateTotalPrice();
+
+            //reset Groups
+            grbSize.Enabled = true;
+            grbToppings.Enabled = true;
+            grbCrustType.Enabled = true;
+            grbWhereToEat.Enabled = true;
+
+            //reset Size
+            rdoMedium.Checked = true;
+
+            //reset Toppings.
+            chkExtraCheese.Checked = false;
+            chkOnion.Checked = false;
+            chkMushrooms.Checked = false;
+            chkOlives.Checked = false;
+            chkTomatoes.Checked = false;
+            chkGreenPeppers.Checked = false;
+
+            //reset CrustType
+            rdoThinCrust.Checked = true;
+
+            //reset Where to Eat
+            rdoEatIn.Checked = true;
+
+            //Reset Order Button
+            btnOrderPizza.Enabled = true;
+
         }
 
-        private void rdoMedium_CheckedChanged(object sender, EventArgs e)
+        private void rdoMedium_CheckedChanged_1(object sender, EventArgs e)
         {
             UpdateSizeLabel("Medium");
             UpdateTotalPrice();
         }
 
-        private void rdoLarge_CheckedChanged(object sender, EventArgs e)
+        private void rdoSmall_CheckedChanged_1(object sender, EventArgs e)
+        {
+            UpdateSizeLabel("Small");
+            UpdateTotalPrice();
+        }
+
+        private void rdoLarge_CheckedChanged_1(object sender, EventArgs e)
         {
             UpdateSizeLabel("Large");
             UpdateTotalPrice();
@@ -164,62 +224,64 @@ namespace PizzaCraft
 
         private void chkExtraCheese_CheckedChanged(object sender, EventArgs e)
         {
-            if (!chkExtraCheese.Checked == true)
-                UpdateToppingsDescription("Extra Cheese", 1);
-            else
-                UpdateToppingsDescription("Extra Cheese");
-
+            UpdateToppingsDescription();
             UpdateTotalPrice();
         }
 
         private void chkOnion_CheckedChanged(object sender, EventArgs e)
         {
-            if (!chkOnion.Checked == true)
-                UpdateToppingsDescription("Onion", 1);
-            else
-                UpdateToppingsDescription("Onion");
-
+            UpdateToppingsDescription();
             UpdateTotalPrice();
         }
 
         private void chkMushrooms_CheckedChanged(object sender, EventArgs e)
         {
-            if (!chkMushrooms.Checked == true)
-                UpdateToppingsDescription("Mushrooms", 1);
-            else
-                UpdateToppingsDescription("Mushrooms");
-
+            UpdateToppingsDescription();
             UpdateTotalPrice();
         }
 
         private void chkOlives_CheckedChanged(object sender, EventArgs e)
         {
-            if (!chkOlives.Checked == true)
-                UpdateToppingsDescription("Olives", 1);
-            else
-                UpdateToppingsDescription("Olives");
-
+            UpdateToppingsDescription();
             UpdateTotalPrice();
         }
 
         private void chkTomatoes_CheckedChanged(object sender, EventArgs e)
         {
-            if (!chkTomatoes.Checked == true)
-                UpdateToppingsDescription("Tomatoes", 1);
-            else
-                UpdateToppingsDescription("Tomatoes");
-
+            UpdateToppingsDescription();
             UpdateTotalPrice();
         }
 
         private void chkGreenPeppers_CheckedChanged(object sender, EventArgs e)
         {
-            if (!chkGreenPeppers.Checked == true)
-                UpdateToppingsDescription("Green Peppers", 1);
-            else
-                UpdateToppingsDescription("Green Peppers");
-            
+            UpdateToppingsDescription();
             UpdateTotalPrice();
+        }
+
+        private void btnOrderPizza_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Confirm Order", "Confirm",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                MessageBox.Show("Order Placed Successfully", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                btnOrderPizza.Enabled = false;
+                grbSize.Enabled = false;
+                grbToppings.Enabled = false;
+                grbCrustType.Enabled = false;
+                grbWhereToEat.Enabled = false;
+
+            }
+            else
+
+                MessageBox.Show("Update your order", "Update",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void btnResetForm_Click(object sender, EventArgs e)
+        {
+            ResetForm();
         }
     }
 }
